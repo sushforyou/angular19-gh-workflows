@@ -1,0 +1,16 @@
+name: Test Workflow
+on: dispatch_workflow
+jobs:
+  test:
+  runs-on: ubantu-latest
+  steps:
+    - name: Get Code
+      uses: actions/checkout@v3
+    - name: Install NodeJS
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+    - name: Install depedencies
+      run: npm ci
+    - name: Run Test
+      run: ng test
