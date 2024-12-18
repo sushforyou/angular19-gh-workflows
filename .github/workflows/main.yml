@@ -1,5 +1,5 @@
 name: Test Workflow
-on: dispatch_workflow
+on: push
 jobs:
   test:
   runs-on: ubantu-latest
