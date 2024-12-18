@@ -13,4 +13,4 @@ jobs:
       - name: Install depedencies
         run: npm ci
       - name: Run Test
-        run: npm run test
+        run: npm run test -- --watch=false --browsers=ChromeHeadless
